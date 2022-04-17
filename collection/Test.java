@@ -22,5 +22,15 @@ public class Test {
         System.out.println(Emp3.getAge());
         System.out.println(Emp3.getNumber());
         System.out.println(Emp3.getAddress());
+        Employee Emp4=(Employee) context.getBean("Emp4");
+        System.out.println(Emp4.getName());
+        System.out.println(Emp4.getAge());
+        System.out.println(Emp4.getNumber());
+        System.out.println(Emp4.getAddress());
+        Employee Emp5=(Employee) context.getBean("Emp5");
+        System.out.println(Emp5.getName());
+        System.out.println(Emp5.getAge());
+        System.out.println(Emp5.getNumber());
+        System.out.println(Emp5.getAddress());
     }
 }

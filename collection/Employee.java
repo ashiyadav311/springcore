@@ -40,12 +40,17 @@ public class Employee {
         }
 
         public Employee(String name, int age, List<String> number, Properties address) {
-                Name = name;
-                Age = age;
-                Number = number;
-                Address = address;
+                this.Name = name;
+                this.Age = age;
+                this.Number = number;
+                this.Address = address;
         }
         public Employee() {
                 super();
+        }
+
+        @Override
+        public String toString() {
+                return this.Name+":"+this.Age+":"+this.Number+":"+this.Address;
         }
 }
