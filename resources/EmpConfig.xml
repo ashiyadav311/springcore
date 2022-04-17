@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean class="com.springcore.collection.Employee" name="Emp1">
+        <property name="Name">
+            <value>Ashi Yadav</value>
+        </property>
+        <property name="Age">
+            <value>21</value>
+        </property>
+        <property name="Number">
+            <list>
+                <value>123456</value>
+                <value>987456</value>
+                <value>743456</value>
+            </list>
+        </property>
+        <property name="Address">
+            <props>
+                <prop key="Street">Mittupur Road</prop>
+                <prop key="City">Ambedkar Nagar</prop>
+                <prop key="Country">India</prop>
+            </props>
+        </property>
+    </bean>
+    <bean class="com.springcore.collection.Employee" name="Emp2">
+        <property name="Name" value="Rohit Sharma"/>
+        <property name="Age" value="25"/>
+        <property name="Number">
+            <list>
+                <value>156456</value>
+                <value>987456</value>
+                <value>743456</value>
+            </list>
+        </property>
+        <property name="Address">
+            <props>
+                <prop key="Street">Malipur Road</prop>
+                <prop key="City">Azamgarh</prop>
+                <prop key="Country">India</prop>
+            </props>
+        </property>
+    </bean>
+    <bean class="com.springcore.collection.Employee" name="Emp3" p:Name="Vishal Agnihotri" p:Age="24">
+        <property name="Number">
+            <list>
+                <value>156456</value>
+                <value>987456</value>
+                <value>743456</value>
+            </list>
+        </property>
+        <property name="Address">
+            <props>
+                <prop key="Street">Hanuman Road</prop>
+                <prop key="City">Lucknow</prop>
+                <prop key="Country">India</prop>
+            </props>
+        </property>
+    </bean>
+    <bean class="com.springcore.collection.Employee" name="Emp4">
+        <constructor-arg value="Virat Kohli"/>
+        <constructor-arg value="28"/>
+        <constructor-arg>
+            <list>
+                <value>156456</value>
+                <value>987456</value>
+                <value>743456</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg>
+            <props>
+                <prop key="Street">veer bahadur marg</prop>
+                <prop key="City">Delhi</prop>
+                <prop key="Country">India</prop>
+            </props>
+        </constructor-arg>
+    </bean>
+    <bean class="com.springcore.collection.Employee" name="Emp5" p:Name="Nisha Sindhia" p:Age="25">
+        <property name="Number">
+            <list>
+                <value>156456</value>
+                <value>987456</value>
+                <value>743456</value>
+            </list>
+        </property>
+        <property name="Address">
+            <props>
+                <prop key="Street">kalkaji</prop>
+                <prop key="City">Faizabad</prop>
+                <prop key="Country">India</prop>
+            </props>
+        </property>
+    </bean>
+</beans>
