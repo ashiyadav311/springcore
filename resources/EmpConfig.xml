@@ -3,6 +3,7 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
@@ -82,6 +83,22 @@
         </constructor-arg>
     </bean>
     <bean class="com.springcore.collection.Employee" name="Emp5" p:Name="Nisha Sindhia" p:Age="25">
+        <property name="Number">
+            <list>
+                <value>156456</value>
+                <value>987456</value>
+                <value>743456</value>
+            </list>
+        </property>
+        <property name="Address">
+            <props>
+                <prop key="Street">kalkaji</prop>
+                <prop key="City">Faizabad</prop>
+                <prop key="Country">India</prop>
+            </props>
+        </property>
+    </bean>
+    <bean class="com.springcore.collection.Employee" name="Emp6" c:Name="Nisha Sindhia" c:Age="25">
         <property name="Number">
             <list>
                 <value>156456</value>
