@@ -6,6 +6,7 @@ public class TestStereo {
         ApplicationContext context = new ClassPathXmlApplicationContext("StereoConfig.xml");
         com.springcore.auto.wire.CourseDuration courseDuration = context.getBean("courseDuration", com.springcore.auto.wire.CourseDuration.class);
         System.out.println(courseDuration);
+        System.out.println(courseDuration.hashCode());
     }
 
 }
