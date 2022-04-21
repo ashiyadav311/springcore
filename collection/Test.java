@@ -21,7 +21,7 @@ public class Test {
         System.out.println(Emp3.getEmpId());
         System.out.println(Emp3.getEmpName());
         System.out.println(Emp3.getNumber());
-        System.out.println(Emp4.getAddress());
+        System.out.println(Emp3.getAddress());
         Employee Emp4=(Employee) context.getBean("employee4");
         System.out.println(Emp4.getEmpId());
         System.out.println(Emp4.getEmpName());
