@@ -7,30 +7,35 @@ public class Test {
     public static void main( String[] args )
     {
         ApplicationContext context=new ClassPathXmlApplicationContext("EmpConfig.xml");
-        Employee Emp1=(Employee) context.getBean("Emp1");
-        System.out.println(Emp1.getName());
-        System.out.println(Emp1.getAge());
+        Employee Emp1=(Employee) context.getBean("employee1");
+        System.out.println(Emp1.getEmpId());
+        System.out.println(Emp1.getEmpName());
         System.out.println(Emp1.getNumber());
         System.out.println(Emp1.getAddress());
-        Employee Emp2=(Employee) context.getBean("Emp2");
-        System.out.println(Emp2.getName());
-        System.out.println(Emp2.getAge());
+        Employee Emp2=(Employee) context.getBean("employee2");
+        System.out.println(Emp2.getEmpId());
+        System.out.println(Emp2.getEmpName());
         System.out.println(Emp2.getNumber());
         System.out.println(Emp2.getAddress());
-        Employee Emp3=(Employee) context.getBean("Emp3");
-        System.out.println(Emp3.getName());
-        System.out.println(Emp3.getAge());
+        Employee Emp3=(Employee) context.getBean("employee3");
+        System.out.println(Emp3.getEmpId());
+        System.out.println(Emp3.getEmpName());
         System.out.println(Emp3.getNumber());
         System.out.println(Emp3.getAddress());
-        Employee Emp4=(Employee) context.getBean("Emp4");
-        System.out.println(Emp4.getName());
-        System.out.println(Emp4.getAge());
+        Employee Emp4=(Employee) context.getBean("employee4");
+        System.out.println(Emp4.getEmpId());
+        System.out.println(Emp4.getEmpName());
         System.out.println(Emp4.getNumber());
         System.out.println(Emp4.getAddress());
-        Employee Emp5=(Employee) context.getBean("Emp5");
-        System.out.println(Emp5.getName());
-        System.out.println(Emp5.getAge());
+        Employee Emp5=(Employee) context.getBean("employee5");
+        System.out.println(Emp5.getEmpId());
+        System.out.println(Emp5.getEmpName());
         System.out.println(Emp5.getNumber());
         System.out.println(Emp5.getAddress());
+        Employee Emp6=(Employee) context.getBean("employee6");
+        System.out.println(Emp6.getEmpId());
+        System.out.println(Emp6.getEmpName());
+        System.out.println(Emp6.getNumber());
+        System.out.println(Emp6.getAddress());
     }
 }

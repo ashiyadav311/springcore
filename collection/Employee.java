@@ -1,56 +1,60 @@
 package com.springcore.collection;
+import com.springcore.collection.Address;
 import java.util.List;
-import java.util.Properties;
+
 public class Employee {
-        private String Name;
-        private int Age;
-        private List<String> Number;
-        private Properties Address;
-
-        public String getName() {
-                return Name;
-        }
-
-        public void setName(String name) {
-                Name = name;
-        }
-
-        public int getAge() {
-                return Age;
-        }
-
-        public void setAge(int age) {
-                Age = age;
-        }
-
-        public List<String> getNumber() {
-                return Number;
-        }
-
-        public void setNumber(List<String> number) {
-                Number = number;
-        }
-
-        public Properties getAddress() {
-                return Address;
-        }
-
-        public void setAddress(Properties address) {
-                Address = address;
-        }
-
-        public Employee(String name, int age, List<String> number, Properties address) {
-                this.Name = name;
-                this.Age = age;
-                this.Number = number;
-                this.Address = address;
-        }
-        public Employee() {
-                super();
-        }
-
+        private int empId;
+        private String empName;
+        private Address address;
+        private List<Integer> number;
         @Override
         public String toString() {
-                return this.Name+":"+this.Age+":"+this.Number+":"+this.Address;
+                return "Id:" + empId +
+                        ", Name:" + empName +
+                        ", Address:" + address+
+                        ", Numbers:" + number;
+        }
+
+        public Employee()
+        {
+        }
+
+        public Employee(int empId, String empName, Address address,List<Integer> number) {
+                this.empId = empId;
+                this.empName = empName;
+                this.address=address;
+                this.number=number;
+        }
+
+        public int getEmpId() {
+                return empId;
+        }
+
+        public void setEmpId(int empId) {
+                this.empId = empId;
+        }
+
+        public String getEmpName() {
+                return empName;
+        }
+
+        public void setEmpName(String empName) {
+                this.empName = empName;
+        }
+
+        public Address getAddress() {
+                return address;
+        }
+
+        public void setAddress(Address address) {
+                this.address = address;
+        }
+
+        public List<Integer> getNumber() {
+                return number;
+        }
+
+        public void setNumber(List<Integer> number) {
+                this.number = number;
         }
 }
