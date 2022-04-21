@@ -6,14 +6,24 @@ public class Passenger {
     private String Name;
     private int Age;
     private int PhoneNo;
-    private PassengerAddress A;
+    private PassengerAddress address;
+
+    public Passenger() {
+    }
+
+    public Passenger(String name, int age, int phoneNo, PassengerAddress address) {
+        this.Name = name;
+        this.Age = age;
+        this.PhoneNo = phoneNo;
+        this.address = address;
+    }
 
     public String getName() {
         return Name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.Name = name;
     }
 
     public int getAge() {
@@ -21,32 +31,23 @@ public class Passenger {
     }
 
     public void setAge(int age) {
-        Age = age;
+        this.Age = age;
     }
 
-    public double getPhoneNo() {
+    public int getPhoneNo() {
         return PhoneNo;
     }
 
     public void setPhoneNo(int phoneNo) {
-        PhoneNo = phoneNo;
+        this.PhoneNo = phoneNo;
     }
 
-    public PassengerAddress getA() {
-        return A;
+    public PassengerAddress getAddress() {
+        return address;
     }
 
-    public void setA(PassengerAddress a) {
-        A = a;
-    }
-
-    public Passenger(String name, int age, int phoneNo, PassengerAddress a) {
-        Name = name;
-        Age = age;
-        PhoneNo = phoneNo;
-        A = a;
-    }
-    public Passenger() {
+    public void setAddress(PassengerAddress address) {
+        this.address = address;
     }
 
     @Override
@@ -55,7 +56,7 @@ public class Passenger {
                 "Name='" + Name + '\'' +
                 ", Age=" + Age +
                 ", PhoneNo=" + PhoneNo +
-                ", A=" + A +
+                ", address=" + address +
                 '}';
     }
 }
