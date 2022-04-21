@@ -32,10 +32,5 @@ public class Test {
         System.out.println(Emp5.getAge());
         System.out.println(Emp5.getNumber());
         System.out.println(Emp5.getAddress());
-        Employee Emp6=(Employee) context.getBean("Emp6");
-        System.out.println(Emp6.getName());
-        System.out.println(Emp6.getAge());
-        System.out.println(Emp6.getNumber());
-        System.out.println(Emp6.getAddress());
     }
 }

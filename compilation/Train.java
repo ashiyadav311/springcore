@@ -10,7 +10,7 @@ public class Train {
     private String DepartureTime;
     private String BoardingStn;
     private String Destination;
-    private Passenger P;
+    private List<Passenger> P;
 
     public String getTrainName() {
         return TrainName;
@@ -60,15 +60,15 @@ public class Train {
         Destination = destination;
     }
 
-    public Passenger getP() {
+    public List<Passenger> getP() {
         return P;
     }
 
-    public void setP(Passenger p) {
+    public void setP(List<Passenger> p) {
         P = p;
     }
 
-    public Train(String trainName, int PNRnumber, String arrivalTime, String departureTime, String boardingStn, String destination, Passenger p) {
+    public Train(String trainName, int PNRnumber, String arrivalTime, String departureTime, String boardingStn, String destination, List<Passenger> p) {
         TrainName = trainName;
         this.PNRnumber = PNRnumber;
         ArrivalTime = arrivalTime;
@@ -79,6 +79,7 @@ public class Train {
     }
 
     public Train() {
+
         super();
     }
 

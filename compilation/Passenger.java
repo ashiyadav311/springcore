@@ -1,4 +1,6 @@
 package com.springcore.compilation;
+import com.springcore.compilation.PassengerAddress;
+import org.springframework.beans.factory.annotation.Autowired;
 
 public class Passenger {
     private String Name;
@@ -44,9 +46,7 @@ public class Passenger {
         PhoneNo = phoneNo;
         A = a;
     }
-
     public Passenger() {
-        super();
     }
 
     @Override

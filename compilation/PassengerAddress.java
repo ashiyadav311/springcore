@@ -1,24 +1,26 @@
 package com.springcore.compilation;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class PassengerAddress {
-    private int StreetNo;
-    private int PinCode;
+    private double StreetNo;
+    private float PinCode;
     private String City;
     private String Landmark;
 
-    public int getStreetNo() {
+    public double getStreetNo() {
         return StreetNo;
     }
 
-    public void setStreetNo(int streetNo) {
+    public void setStreetNo(double streetNo) {
         StreetNo = streetNo;
     }
 
-    public int getPinCode() {
+    public float getPinCode() {
         return PinCode;
     }
 
-    public void setPinCode(int pinCode) {
+    public void setPinCode(float pinCode) {
         PinCode = pinCode;
     }
 
@@ -39,14 +41,13 @@ public class PassengerAddress {
     }
 
 
-    public PassengerAddress(int streetNo, int pinCode, String city, String landmark) {
-        StreetNo = streetNo;
-        PinCode = pinCode;
-        City = city;
-        Landmark = landmark;
+    public PassengerAddress(double streetNo, float pinCode, String city, String landmark) {
+        this.StreetNo = streetNo;
+        this.PinCode = pinCode;
+        this.City = city;
+        this.Landmark = landmark;
     }
     public PassengerAddress() {
-        super();
     }
 
     @Override

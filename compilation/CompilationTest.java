@@ -37,6 +37,6 @@ public class CompilationTest {
         System.out.println(T1.getBoardingStn());
         System.out.println(T1.getDestination());
         System.out.println("List Of Passenger Boarding This Train");
-        System.out.println(T1.getP().getName());
+        System.out.println(T1.getP());
     }
 }
