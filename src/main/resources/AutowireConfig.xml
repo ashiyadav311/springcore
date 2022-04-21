@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean class="com.springcore.auto.wire.Address" name="address">
+        <property name="Street" value="Hanuman Road"/>
+        <property name="PinCode" value="224149"/>
+    </bean>
+    <bean class="com.springcore.auto.wire.Student" name="Student1" autowire="byName"/>
+    <bean class="com.springcore.auto.wire.CourseDuration" name="Course1">
+        <property name="Course" value="Computers"/>
+        <property name="Duration" value="3"/>
+    </bean>
+    <bean class="com.springcore.auto.wire.Student" name="Student2" autowire="byType"/>
+    </beans>

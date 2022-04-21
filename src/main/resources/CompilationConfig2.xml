@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config/>
+    <bean class="com.springcore.compilation2.StudentAddress" name="A1">
+        <property name="StreetNo" value="12"/>
+        <property name="City" value="Lucknow"/>
+        <property name="PinCode" value="224149"/>
+    </bean>
+    <bean class="com.springcore.compilation2.StudentAddress" name="A2">
+        <constructor-arg value="56"/>
+        <constructor-arg value="Mumbai"/>
+        <constructor-arg value="113245"/>
+    </bean>
+    <bean class="com.springcore.compilation2.CollegeStudents" name="S1">
+        <constructor-arg value="Virat Kohli"/>
+        <constructor-arg value="28"/>
+        <constructor-arg value="Morning"/>
+        <constructor-arg ref="A1"/>
+    </bean>
+    <bean class="com.springcore.compilation2.CollegeStudents" name="S2" p:Name="Ashi Yadav" p:Age="21" p:Shift="Evening" p:Ad-ref="A2"/>
+    <bean class="com.springcore.compilation2.College" name="C1" autowire="byType">
+        <property name="CS">
+            <list>
+                <ref bean="S1"/>
+                <ref bean="S2"/>
+            </list>
+        </property>
+    </bean>
+    <bean class="com.springcore.compilation2.College" name="C2" autowire="byName">
+        <property name="CS">
+            <list>
+                <ref bean="S1"/>
+                <ref bean="S2"/>
+            </list>
+        </property>
+    </bean>
+    <bean class="com.springcore.compilation2.CollegeStudents" name="C3"/>
+</beans>
